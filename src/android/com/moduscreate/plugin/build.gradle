@@ -41,7 +41,8 @@ allprojects {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '4.10.3'
+    gradleVersion = '4.4'
+    distributionUrl = distributionUrl.replace("bin", "all")
 }
 
 // Configuration properties. Set these via environment variables, build-extras.gradle, or gradle.properties.
