@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com-moduscreate-plugins-echo" version="0.0.1" 
+xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>ModusEcho</name>
+  <js-module name="ModusEcho" src="www/ModusEcho.js">
+    <clobbers target="modusecho" />
+  </js-module>
+    <platform name="ios">
+      <config-file target="config.xml" parent="/*">
+        <feature name="ModusEcho">
+          <param name="ios-package" value="ModusEcho" />
+        </feature>
+      </config-file>
+      <header-file src="src/ios/ModusEcho.h" />
+      <source-file src="src/ios/ModusEcho.m" />
+      <header-file src="src/ios/ViewController.h" />
+      <source-file src="src/ios/ViewController.m" />
+      <header-file src="src/ios/NotificationViewController.h" />
+      <source-file src="src/ios/NotificationViewController.m" />
+      <header-file src="src/ios/IndiceViewController.h" />
+      <source-file src="src/ios/IndiceViewController.m" />
+      <header-file src="src/ios/PaginasViewController.h" />
+      <source-file src="src/ios/PaginasViewController.m" />
+      <header-file src="src/ios/ImagenesViewController.h" />
+      <source-file src="src/ios/ImagenesViewController.m" />
+      <header-file src="src/ios/GaleriaViewController.h" />
+      <source-file src="src/ios/GaleriaViewController.m" />
+      <header-file src="src/ios/FullScreenViewController.h" />
+      <source-file src="src/ios/FullScreenViewController.m" />
+      <resource-file src="src/ios/Base.lproj/Main.storyboard" />
+    </platform>
+    <platform name="android">
+      <config-file target="config.xml" parent="/*">
+        <feature name="ModusEcho">
+            <param name="android-package" value="com.moduscreate.plugin.ModusEcho"/>
+        </feature>
+      </config-file>
+      <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:label="New Activity" android:name="com.moduscreate.plugin.NewActivity"></activity>
+            <activity android:label="Visor Imagen" android:name="com.moduscreate.plugin.VisorImagen" />
+
+      </config-file>
+
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.CAMERA" />
+        </config-file>
+      <source-file src="src/android/com/moduscreate/plugin/ModusEcho.java" target-dir="src/com/moduscreate/plugin" />
+      <source-file src="src/android/com/moduscreate/plugin/NewActivity.java" target-dir="src/com/moduscreate/plugin" />
+       <source-file src="src/android/com/moduscreate/plugin/AdminSQLiteOpenHelper.java" target-dir="src/com/moduscreate/plugin" />
+       <source-file src="src/android/com/moduscreate/plugin/TouchImageView.java" target-dir="src/com/moduscreate/plugin" />
+       <source-file src="src/android/com/moduscreate/plugin/VisorImagen.java" target-dir="src/com/moduscreate/plugin" />
+      
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/bookmark.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/camera.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/camera_burst.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/camera_iris.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/close.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/delete.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/deletegris.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/eraser.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/eraser_active.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/fabbutton.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/format_list_bulleted.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/format_underline.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/ic_launcher_background.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/note.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/pencil_box.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/pencil_box_outline.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/plus.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/star.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/undo.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/arrow_left.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/fabbuttontransparent.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/ejercicio.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/fabbuttonpinkligth.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/fabbuttongrey.xml" target-dir="res/drawable"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable/fabbuttonmarron.xml" target-dir="res/drawable"/>
+      
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable-port-xhdpi/fabbuttonblack.xml" target-dir="res/drawable-port-xhdpi"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable-port-xhdpi/fabbuttonblue.xml" target-dir="res/drawable-port-xhdpi"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable-port-xhdpi/fabbuttonblue2.xml" target-dir="res/drawable-port-xhdpi"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable-port-xhdpi/fabbuttongray.xml" target-dir="res/drawable-port-xhdpi"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable-port-xhdpi/fabbuttongreen.xml" target-dir="res/drawable-port-xhdpi"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable-port-xhdpi/fabbuttonpink.xml" target-dir="res/drawable-port-xhdpi"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable-port-xhdpi/fabbuttonpink2.xml" target-dir="res/drawable-port-xhdpi"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable-port-xhdpi/fabbuttonred.xml" target-dir="res/drawable-port-xhdpi"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/drawable-port-xhdpi/fabbuttonyellow.xml" target-dir="res/drawable-port-xhdpi"/>
+      
+      <source-file src="src/android/com/moduscreate/plugin/res/layout/activity_new.xml" target-dir="res/layout"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/layout/modalgrid.xml" target-dir="res/layout"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/layout/modal.xml" target-dir="res/layout"/>
+      <source-file src="src/android/com/moduscreate/plugin/res/layout/visorimagenes.xml" target-dir="res/layout"/>
+      
+      <source-file src="src/android/com/moduscreate/plugin/res/layout-large/activity_new.xml" target-dir="res/layout-large"/>
+      
+      <source-file src="src/android/com/moduscreate/plugin/res/layout-xlarge/activity_new.xml" target-dir="res/layout-xlarge"/>
+      
+      <source-file src="src/android/com/moduscreate/plugin/res/values/dimens.xml" target-dir="res/values"/>
+  
+      
+      <framework src="com.android.support:percent:25.0.1" />
+      <framework src="com.squareup.picasso:picasso:2.71828" />
+      <framework src="com.github.hkk595:Resizer:v1.5" />
+
+  </platform>
+</plugin>

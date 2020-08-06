@@ -1,0 +1,31 @@
+{
+  "name": "modusecho",
+  "version": "0.0.2",
+  "description": "Modus Create Demo Cordova Plugin",
+  "cordova": {
+    "id": "com-moduscreate-plugins-echo",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ModusCreateOrg/cordova-plugin-example.git"
+  },
+  "keywords": [
+    "cordova",
+    "demo",
+    "modus",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-browser"
+  ],
+  "author": "Modus Create",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ModusCreateOrg/cordova-plugin-example/issues"
+  },
+  "homepage": "https://github.com/ModusCreateOrg/cordova-plugin-example#readme"
+}

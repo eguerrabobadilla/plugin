@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait"
+    tools:context="com.moduscreate.plugin.NewActivity">
+
+    <org.apache.cordova.engine.SystemWebView
+        android:id="@+id/web1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabFoto"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        android:rotation="90"
+        android:src="@drawable/camera"/>
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabSubrayar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        android:rotation="90"
+        android:src="@drawable/format_underline"/>
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabRayar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        android:rotation="90"
+        android:src="@drawable/pencil_box_outline"/>
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabNotas"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        android:rotation="90"
+        android:src="@drawable/note"/>
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabIndice"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        android:rotation="90"
+        android:src="@drawable/format_list_bulleted"/>
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabFavoritos"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        android:rotation="90"
+        android:src="@drawable/star"/>
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabBookmark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        android:rotation="90"
+        android:src="@drawable/bookmark"/>
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabMain"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/plus"/>
+
+    <ImageButton
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="75dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbuttongray"
+        android:id="@+id/FabNumeroPagina"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/txtNumeroPagina"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="96dp"
+        android:layout_marginLeft="28dp"
+        android:text="1"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="265dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabBorrar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:src="@drawable/eraser"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/PanelSubrayado"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="@dimen/fab_large"
+            android:layout_height="@dimen/fab_large"
+            android:background="@drawable/fabbuttonyellow"
+            android:id="@+id/FabSubrayarAmarillo" />
+
+        <ImageButton
+            android:layout_width="@dimen/fab_large"
+            android:layout_height="@dimen/fab_large"
+            android:background="@drawable/fabbuttonpink"
+            android:id="@+id/FabSubrayarRosa" />
+
+        <ImageButton
+            android:layout_width="@dimen/fab_large"
+            android:layout_height="@dimen/fab_large"
+            android:background="@drawable/fabbuttonblue"
+            android:id="@+id/FabSubrayarAzul" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/PanelRayado"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <TableRow android:layout_margin="0dip"
+            android:gravity="center"
+            android:id="@+id/first_row">
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbuttonblack"
+                android:id="@+id/FabRayarNegro" />
+
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbuttonred"
+                android:id="@+id/FabRayarRojo" />
+
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbuttonyellow"
+                android:id="@+id/FabRayarAmarillo" />
+        </TableRow>
+        <TableRow android:layout_margin="0dip"
+            android:gravity="center"
+            android:id="@+id/second_row">
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbuttongreen"
+                android:id="@+id/FabRayarVerde" />
+
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbuttonpink2"
+                android:id="@+id/FabRayarRosa" />
+
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbuttonblue2"
+                android:id="@+id/FabRayarAzul" />
+        </TableRow>
+        <TableRow android:layout_margin="0dip"
+            android:gravity="center"
+            android:id="@+id/third_row">
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbuttonpinkligth"
+                android:id="@+id/FabRayarRosaLigero" />
+
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbuttongrey"
+                android:id="@+id/FabRayarGrey" />
+
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbuttonmarron"
+                android:id="@+id/FabRayarMarron" />
+        </TableRow>
+    </TableLayout>
+
+
+    <ImageButton
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="320dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbuttonyellow"
+        android:id="@+id/FabColorSubrayado"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="265dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabBorrarActivo"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/eraser_active"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="210dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:visibility="gone"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabCloseSubrayar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/close"
+        />
+
+    <Button
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="430dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabTamano"
+        android:text="1.0"
+        android:visibility="gone"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+
+
+    <ImageButton
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="375dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbuttonblack"
+        android:id="@+id/FabRayarColor"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+
+    <ImageButton
+        android:visibility="gone"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="320dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabUndo"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/eraser"/>
+
+    <ImageButton
+        android:visibility="gone"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="265dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabLimpiar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/delete"/>
+
+    <ImageButton
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="210dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabCloseRayar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:src="@drawable/close"/>
+
+    <SeekBar
+        android:id="@+id/simpleSeekBar"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="-40dp"
+        android:layout_marginBottom="350dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:rotation="270"
+        android:max="100"
+        android:min="5"
+        android:progress="10"
+        android:visibility="gone"
+        />
+
+    <ImageButton
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="320dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabTomarFoto"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:src="@drawable/camera_iris"/>
+
+    <ImageButton
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="265dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabGaleria"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:src="@drawable/camera_burst"/>
+
+    <ImageButton
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="210dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabCloseFoto"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:src="@drawable/close"/>
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabCalificar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/arrow_left"
+        />
+    <ImageButton
+        android:visibility="gone"
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabCalificarOpen"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/deletegris"
+
+        />
+
+    <ImageButton
+        android:visibility="gone"
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabEjercicios"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ejercicio"/>
+
+</RelativeLayout>
