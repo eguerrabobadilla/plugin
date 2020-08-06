@@ -98,7 +98,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
       
       <source-file src="src/android/com/moduscreate/plugin/res/values/dimens.xml" target-dir="res/values"/>
   
-      
+      <framework src="src/android/com/moduscreate/plugin/build.gradle" custom="true" type="gradleReference" />
       <framework src="com.android.support:percent:25.0.1" />
       <framework src="com.squareup.picasso:picasso:2.71828" />
       <framework src="com.github.hkk595:Resizer:v1.5" />
