@@ -85,8 +85,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import io.ionic.starter.BuildConfig;
-import io.ionic.starter.MainActivity;
+import lbs.starter.BuildConfig;
+import lbs.starter.MainActivity;
 import me.echodev.resizer.Resizer;
 
 import com.squareup.picasso.MemoryPolicy;

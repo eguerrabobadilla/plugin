@@ -18,7 +18,7 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
-import io.ionic.starter.R;
+import lbs.starter.R;
 
 public class VisorImagen  extends Activity implements View.OnTouchListener {
 
