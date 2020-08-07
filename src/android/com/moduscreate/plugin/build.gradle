@@ -36,12 +36,13 @@ allprojects {
     repositories {
         mavenCentral()
         jcenter()
-        maven { url "https://jitpack.io" }
+        maven { url 'https://jitpack.io' }
     }
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '4.10.3'
+    gradleVersion = '4.4'
+    distributionUrl = distributionUrl.replace("bin", "all")
 }
 
 // Configuration properties. Set these via environment variables, build-extras.gradle, or gradle.properties.
@@ -294,11 +295,13 @@ dependencies {
     implementation fileTree(dir: 'libs', include: '*.jar')
     // SUB-PROJECT DEPENDENCIES START
     implementation(project(path: ":CordovaLib"))
-    implementation "com.android.support:support-annotations:27.+"
     implementation "com.android.support:support-v4:27.+"
-    // SUB-PROJECT DEPENDENCIES END
+    implementation "com.android.support:support-annotations:27.+"
+    implementation "com.android.support:percent:25.0.1"
+    implementation "com.squareup.picasso:picasso:2.71828"
+    implementation "com.github.hkk595:Resizer:v1.5"
     implementation 'org.apache.directory.studio:org.apache.commons.io:2.4'
-
+    // SUB-PROJECT DEPENDENCIES END
 }
 
 def promptForReleaseKeyPassword() {
