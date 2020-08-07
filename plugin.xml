@@ -101,8 +101,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
       
       <framework src="com.android.support:percent:25.0.1" />
       <framework src="com.squareup.picasso:picasso:2.71828" />
-      <framework src="com.github.hkk595:Resizer:v1.5" />
-      <framework src="src/android/com/moduscreate/plugin/build.gradle" custom="true" type="gradleReference" />
+      <framework src="src/android/com/moduscreate/plugin/plugin.gradle" custom="true" type="gradleReference" />
 
   </platform>
 </plugin>

@@ -1,0 +1,8 @@
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.github.hkk595:Resizer:v1.5'
+
+}
